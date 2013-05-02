@@ -1,7 +1,7 @@
 #Programmer: Ammar Hebib
 #utm.py
 #Universal Turing Machine
-<<<<<<< HEAD
+
 
 from time import clock, time
 #without this python exceeds recurrsion depth
@@ -83,7 +83,7 @@ def busyBeaver4():
     position = start()
 
     busyBeaver4Transition(tape, state, position)
-=======
+
 #everytime tape moves in direction append a 'b' in that direction
 #tape.append('b')
 #tape.insert(0,'b')
@@ -97,8 +97,6 @@ def main():
     #state = initState()
     #position = start()
     #function(tape, state, position)
-
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
 
 def initState():
     #initiates state
@@ -114,7 +112,6 @@ def start():
 
 def halt(tape, position, state):
     #stops the program
-<<<<<<< HEAD
     print 'Final Result: ' + tape.arrayToString()
     print str(time()) + ' ms'
 
@@ -140,7 +137,6 @@ def moveR(position, tape):
 def read(tape, position):
     #reads value at position on tape
     value = tape.getValue(position)
-=======
     print tape
     #exit(0)
 
@@ -159,13 +155,10 @@ def moveR(position):
 def read(tape, position):
     #reads value at position on tape
     value = tape[position]
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
-
     return value
 
 def write(tape, position, replacement):
     #replaces value at position with replacement
-<<<<<<< HEAD
     tape.setValue(position, replacement)
 
     return tape
@@ -217,8 +210,7 @@ def function(tape, state, position):
     value = read(tape, position)
 
     print tape.arrayToString()
-    
-=======
+
     tape[position] = replacement
 
     return tape
@@ -226,12 +218,10 @@ def function(tape, state, position):
 def function(tape, state, position):
     #changes state and determines what to do next
     value = read(tape,position)
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
     #q0 state -----------------------------------------------
     if(value == '0' and state == 'q0'):
         replacement = 'b'
         tape = write(tape, position, replacement)
-<<<<<<< HEAD
         position, tape = moveR(position, tape)
         #change state
         state = 'q1'
@@ -244,8 +234,6 @@ def function(tape, state, position):
         position, tape = moveR(position, tape)
         state = 'q5'
         function(tape, state, position)
-        
-=======
         position = moveR(position)
         #change state
         state = 'q1'
@@ -259,12 +247,10 @@ def function(tape, state, position):
         state = 'q5'
         print tape
         function(tape, state, position)
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
     elif(value == 'b' and state == 'q0'):
         halt(tape, position, state)
     #q1 state -----------------------------------------------
     elif(value == '0' and state == 'q1'):
-<<<<<<< HEAD
         position, tape = moveR(position, tape)
         function(tape, state, position)
         
@@ -273,7 +259,7 @@ def function(tape, state, position):
         state = 'q2'
         function(tape, state, position)
         
-=======
+
         position = moveR(position)
         print tape
         function(tape, state, position)
@@ -282,14 +268,12 @@ def function(tape, state, position):
         state = 'q2'
         print tape
         function(tape, state, position)
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
     elif(value == 'b' and state == 'q1'):
         halt(tape, position, state)
     #q2 state -----------------------------------------------
     elif(value == '0' and state == 'q2'):
         replacement = '1'
         tape = write(tape, position, replacement)
-<<<<<<< HEAD
         position, tape = moveL(position, tape)
         state = 'q3'
         function(tape, state, position)
@@ -335,7 +319,6 @@ def function(tape, state, position):
         state = 'q6'
         function(tape, state, position)
         
-=======
         position = moveL(position)
         state = 'q3'
         print tape
@@ -381,12 +364,10 @@ def function(tape, state, position):
         state = 'q6'
         print tape
         function(tape, state, position)
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
     #q5 state -----------------------------------------------
     elif(value == '0' and state == 'q5'):
         replacement = 'b'
         tape = write(tape, position, replacement)
-<<<<<<< HEAD
         position, tape = moveR(position, tape)
         function(tape, state, position)
         
@@ -400,8 +381,7 @@ def function(tape, state, position):
         position, tape = moveR(position, tape)
         state = 'q6'
         function(tape, state, position)
-        
-=======
+
         position = moveR(position)
         print tape
         function(tape, state, position)
@@ -416,7 +396,6 @@ def function(tape, state, position):
         state = 'q6'
         print tape
         function(tape, state, position)
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
     #q6 state -----------------------------------------------
     elif(value == '0' and state == 'q6'):
         halt(tape, position, state)
@@ -425,7 +404,7 @@ def function(tape, state, position):
     elif(value == 'b' and state == 'q6'):
         halt(tape, position, state)
 
-<<<<<<< HEAD
+
 def busyBeaver3Transition(tape, state, position):
     #Transition Function for beaver 3
     value = read(tape, position)
@@ -549,6 +528,4 @@ def busyBeaver4Transition(tape, state, position):
         position, tape = moveR(position, tape)
         busyBeaver4Transition(tape, state, position)
         
-=======
->>>>>>> 4994ecaa4660675371c1dffd19cef0a47db0529b
 main()
