@@ -1,12 +1,9 @@
 #Programmer: Ammar Hebib
 #tape.py
 #Tape object used in Universal Turing Machine
-#Tape used in Universal Turing Machine
-#Tape used in Universal Turing Machine
 
 class Tape():
         tapeObj = []
-
 
         def stringToArray(self, tapeString):
             self.tapeObj = list(tapeString)
@@ -18,9 +15,11 @@ class Tape():
             return strTape
             
         def extendRight(self):
+            #extends tape to the right
             self.tapeObj.append('b')
 
         def extendLeft(self):
+            #extends tape to the left
             self.tapeObj.insert(0,'b')
 
         def getValue(self,position):
@@ -33,9 +32,3 @@ class Tape():
 
         def getTapeLength(self):
             return len(self.tapeObj)
-
-        def __init__(self, userInput):
-            self.tapeObj = list(userInput)
-            
-        def extendRight(self):
-            self.tapeObj.append('b')
