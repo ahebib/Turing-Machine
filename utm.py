@@ -41,11 +41,7 @@ def nonTerminating():
 def subtraction():
     firstInput = raw_input("First number: ")
     secondInput = raw_input("Second number: ")
-<<<<<<< HEAD
     while(int(firstInput) <= int(secondInput)):
-=======
-    while(firstInput <= secondInput):
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         print "Please input a first number that is larger than the second."
         firstInput = firstInput = raw_input("First number: ")
         secondInput = raw_input("Second number: ")
@@ -64,11 +60,7 @@ def subtraction():
     
     state = initState()
     position = start()
-<<<<<<< HEAD
     subtractionTransition(tape, state, position)
-=======
-    function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
 
 def busyBeaver3():
     userInput = raw_input('Please input a combination of 1, 0, and b: ')
@@ -181,11 +173,7 @@ def cntTransitionFunction(tape, state, position):
         print 'Max object calling in Python'
         print 'Last possible count: ' + tape.arrayToString()
         
-<<<<<<< HEAD
 def subtractionTransition(tape, state, position):
-=======
-def function(tape, state, position):
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
     #changes state and determines what to do next for subtraction
     value = read(tape, position)
 
@@ -199,42 +187,26 @@ def function(tape, state, position):
         #change state
         state = 'q1'
         #recall function with new state
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == '1' and state == 'q0'):
         replacement = 'b'
         tape = write(tape, position, replacement)
         position, tape = moveR(position, tape)
         state = 'q5'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == 'b' and state == 'q0'):
         halt(tape, position, state)
     #q1 state -----------------------------------------------
     elif(value == '0' and state == 'q1'):
         position, tape = moveR(position, tape)
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == '1' and state == 'q1'):
         position, tape = moveR(position, tape)
         state = 'q2'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == 'b' and state == 'q1'):
         halt(tape, position, state)
@@ -244,114 +216,66 @@ def function(tape, state, position):
         tape = write(tape, position, replacement)
         position, tape = moveL(position, tape)
         state = 'q3'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
         
     elif(value == '1' and state == 'q2'):
         position, tape = moveR(position, tape)
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
-        
-    elif(value == '1' and state == 'q2'):
-        position, tape = moveR(position, tape)
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == 'b' and state == 'q2'):
         position, tape = moveL(position, tape)
         state = 'q4'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     #q3 state -----------------------------------------------
     elif(value == '0' and state == 'q3'):
         position, tape = moveL(position, tape)
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
         
     elif(value == '1' and state == 'q3'):
         position, tape = moveL(position, tape)
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
-        
-    elif(value == '1' and state == 'q3'):
-        position, tape = moveL(position, tape)
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == 'b' and state == 'q3'):
         position, tape = moveR(position, tape)
         state = 'q0'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     #q4 state -----------------------------------------------
     elif(value == '0' and state == 'q4'):
         position, tape = moveL(position, tape)
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == '1' and state == 'q4'):
         replacement = 'b'
         tape = write(tape, position, replacement)
         position, tape = moveL(position, tape)
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == 'b' and state == 'q4'):
         replacement = '0'
         tape = write(tape, position, replacement)
         position, tape = moveR(position, tape)
         state = 'q6'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     #q5 state -----------------------------------------------
     elif(value == '0' and state == 'q5'):
         replacement = 'b'
         tape = write(tape, position, replacement)
         position, tape = moveR(position, tape)
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == '1' and state == 'q5'):
         replacement = 'b'
         tape = write(tape, position, replacement)
         position, tape = moveR(position, tape)
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     elif(value == 'b' and state == 'q5'):
         position, tape = moveR(position, tape)
         state = 'q6'
-<<<<<<< HEAD
         subtractionTransition(tape, state, position)
-=======
-        function(tape, state, position)
->>>>>>> e82005fd40c0de8671b59c05568c886ca8190f7a
         
     #q6 state -----------------------------------------------
     elif(value == '0' and state == 'q6'):
